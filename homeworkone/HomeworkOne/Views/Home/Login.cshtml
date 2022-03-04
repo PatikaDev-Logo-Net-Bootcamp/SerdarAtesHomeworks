@@ -1,0 +1,29 @@
+﻿@model LoginViewModel
+
+
+
+
+<form id="myForm" method="post">
+     <div class="form-group">
+        <label class="control-label">Ad Soyad</label>
+        <input type="text" class = "form-control" id="adSoyad" value="" asp-for="adSoyad" />
+        <span asp-validation-for="adSoyad" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label  class="control-label">Email</label>
+        <input type="text" class = "form-control" id="email" value="" asp-for="email" />
+        <span asp-validation-for="email" class="text-danger"></span>
+    </div>
+     <div class="form-group">
+        <label class="control-label">Şifre</label>
+        <input type="password" class = "form-control" id="Password" value="" asp-for="password" />
+        <span asp-validation-for="password" class="text-danger"></span>
+    </div>
+    <input class="btn-primary" type="submit" value="Submit"/>
+</form>
+
+
+
+
+
+
