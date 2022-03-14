@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ogfD77lOz/i9s05gec/tEL79+w5W7izr+qkYS8ww8qodDmWMLf397TLe/KvFznMj6roFKsNQu6uMiu9KO4M+9Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\Homeworktwo\\HomeworktwoAPI\\HomeworktwoAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Serdar\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Serdar\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Serdar\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Serdar\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Serdar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Serdar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
