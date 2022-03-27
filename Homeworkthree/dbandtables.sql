@@ -1,8 +1,3 @@
-
-
-CREATE SCHEMA dbo;
-
-
 CREATE TABLE testdb.dbo.Company (
 	id int IDENTITY(0,1) NOT NULL,
 	companyName nvarchar(100) COLLATE Turkish_CI_AS NOT NULL,
