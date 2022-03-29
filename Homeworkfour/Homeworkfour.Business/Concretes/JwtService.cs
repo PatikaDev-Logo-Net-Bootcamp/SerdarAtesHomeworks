@@ -15,19 +15,17 @@ namespace Homeworkfour.Business.Concretes
     public class JwtService : IJwtService
     {
         private readonly IConfiguration configuration;
-        public JwtService(IConfiguration configuration)
+        private readonly IUserService userService;
+        public JwtService(IConfiguration configuration,IUserService userService)
         {
             this.configuration = configuration;
+            this.userService = userService;
         }
-        Dictionary<string, string> users = new Dictionary<string, string>
-        {
-            { "user1","password1"},
-            { "user2","password2"},
-            { "user3","password3"},
-        };
+     
         public TokenDTO Authenticate(UserDTO user)
         {
-            if (!users.Any(x => x.Key == user.Name && x.Value == user.Password))
+            var users = userService.GetAllUsers();
+            if (!users.Any(x => x.username == user.Name && x.password == user.Password))
             {
                 return null;
             }

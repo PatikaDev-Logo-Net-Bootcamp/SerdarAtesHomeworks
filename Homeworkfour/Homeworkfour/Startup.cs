@@ -57,7 +57,8 @@ namespace Homeworkfour
                     IssuerSigningKey = new SymmetricSecurityKey(Key),
                 };
             });
-            services.AddSingleton<IJwtService, JwtService>();
+            //services.AddSingleton<IJwtService, JwtService>();
+           
 
             services.AddSwaggerGen(c =>
             {
@@ -96,6 +97,8 @@ namespace Homeworkfour
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<ICompanyService, CompanyService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IJwtService,JwtService>();
 
      
 
