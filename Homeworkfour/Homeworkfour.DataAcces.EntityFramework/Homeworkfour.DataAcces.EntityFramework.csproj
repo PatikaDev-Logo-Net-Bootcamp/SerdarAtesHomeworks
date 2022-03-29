@@ -17,8 +17,4 @@
     <ProjectReference Include="..\Homeworkfour.Domain\Homeworkfour.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

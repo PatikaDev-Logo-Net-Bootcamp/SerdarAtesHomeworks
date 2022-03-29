@@ -57,10 +57,16 @@ namespace Homeworkfour.Controllers
                 });
         }
         [Route("DeleteCompany")]
-        [HttpPut]
-        public IActionResult Delete([FromBody] Company model)
+        [HttpPost]
+        public IActionResult Delete([FromBody] CompanyDeleteUpdateDTO model)
         {
-            companyService.DeleteCompany(model);
+            companyService.DeleteCompany(new Company
+            {
+                Id = model.id,
+                Name=model.name,
+                CreatedBy = "serdar",
+                CreatedAt = System.DateTime.Now
+            }); ;
 
             return Ok(
                 new CompanyResponse

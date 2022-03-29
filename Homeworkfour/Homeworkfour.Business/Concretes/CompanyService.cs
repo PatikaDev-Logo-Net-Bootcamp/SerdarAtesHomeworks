@@ -29,7 +29,7 @@ namespace Homeworkfour.Business.Concretes
         public void DeleteCompany(Company company)
         {
         
-                repository.Update(company);
+                repository.Delete(company);
                 unitOfWork.Commit();
         }
         public void UpdateCompany(Company company)

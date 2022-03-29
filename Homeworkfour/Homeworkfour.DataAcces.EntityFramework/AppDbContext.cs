@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using Microsoft.EntityFrameworkCore;
 using Homeworkfour.DataAcces.EntityFramework.Configurations;
 using Homeworkfour.Domain.Entities;
@@ -16,10 +12,12 @@ namespace Homeworkfour.DataAcces.EntityFramework
 
         }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Users> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new CompanyConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
     }
    

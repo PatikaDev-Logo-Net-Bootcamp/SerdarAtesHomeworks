@@ -18,12 +18,13 @@ namespace Homeworkfour.DataAccess.EntityFramework.Repository.Concretes
         }
         public void Delete(T entity)
         {
-            T exist = unitOfWork.Context.Set<T>().Find(entity.Id);
-            if (exist != null)
+
+            if (entity != null)
             {
-                exist.IsDeleted = true;
+                entity.IsDeleted = true;
                 unitOfWork.Context.Entry(entity).State = EntityState.Modified;
             }
+       
         }
         public IQueryable<T> Get()
         {
