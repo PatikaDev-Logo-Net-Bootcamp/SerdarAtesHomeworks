@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Homeworkfour.DataAccess.EntityFramework.Repository\Homeworkfour.DataAccess.EntityFramework.Repository.csproj" />
+    <ProjectReference Include="..\Homeworkfour.Domain\Homeworkfour.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

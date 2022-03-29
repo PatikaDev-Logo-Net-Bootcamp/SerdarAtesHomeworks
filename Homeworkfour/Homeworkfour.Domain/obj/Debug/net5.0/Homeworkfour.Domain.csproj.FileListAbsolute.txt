@@ -1,0 +1,12 @@
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\bin\Debug\net5.0\Homeworkfour.Domain.deps.json
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\bin\Debug\net5.0\Homeworkfour.Domain.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\bin\Debug\net5.0\Homeworkfour.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\Homeworkfour.Domain.csproj.AssemblyReference.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\Homeworkfour.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\Homeworkfour.Domain.AssemblyInfoInputs.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\Homeworkfour.Domain.AssemblyInfo.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\Homeworkfour.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\Homeworkfour.Domain.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\refint\Homeworkfour.Domain.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\Homeworkfour.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfour\Homeworkfour.Domain\obj\Debug\net5.0\ref\Homeworkfour.Domain.dll
