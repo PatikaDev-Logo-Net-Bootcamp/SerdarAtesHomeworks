@@ -1,10 +1,9 @@
 using Homeworkfive.Business.Abstracts;
-using Homeworkfive.Business.Concretes;
+
 using Homeworkfive.Domain.Entities;
-using Microsoft.Extensions.DependencyInjection;
+
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
+
 using System;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -15,15 +14,14 @@ namespace Homeworkfive
 {
     public class Worker : BackgroundService
     {
-        private readonly IServiceScopeFactory serviceFactory;
-        private readonly ILogger<Worker> _logger;
+
         private HttpClient httpClient;
+        private readonly Lazy<IPostService> _postService;
 
 
-        public Worker(ILogger<Worker> logger,IServiceScopeFactory serviceFactory)
+        public Worker(Lazy<IPostService> postService)
         {
-            this.serviceFactory = serviceFactory;
-            _logger = logger;
+            _postService = postService;
 
         
         }
@@ -51,22 +49,20 @@ namespace Homeworkfive
             httpClient.BaseAddress = new Uri("http://jsonplaceholder.typicode.com/");
             while (!stoppingToken.IsCancellationRequested)
             {
-                using (IServiceScope scope = serviceFactory.CreateScope())
-                {
-                   var store = scope.ServiceProvider.GetRequiredService<IPostService>();
+    
               
 
                     var posts = await httpClient.GetFromJsonAsync<Post[]>("posts");
                     foreach (var post in posts)
-                        
-                        store.AddPost(new Post
-                        {
-                            postid = post.id,
-                            body = post.body,
-                            userId = post.userId,
-                            title = post.title,
-                        });
-                }
+
+                    _postService.Value.AddPost(new Post
+                    {
+                        postid = post.id,
+                        body = post.body,
+                        userId = post.userId,
+                        title = post.title,
+                    });
+
 
             }
             await Task.Delay(5000, stoppingToken);

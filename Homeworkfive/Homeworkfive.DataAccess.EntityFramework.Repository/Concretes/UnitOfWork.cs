@@ -1,4 +1,5 @@
 ﻿using Homeworkfive.DataAccess.EntityFramework.Repository.Abstracts;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,12 @@ namespace Homeworkfive.DataAccess.EntityFramework.Repository.Concretes
         public AppDbContext Context { get; }
 
 
+
         public UnitOfWork(AppDbContext context)
         {
             Context = context;
+
+    
         }
         public void Commit()
         {

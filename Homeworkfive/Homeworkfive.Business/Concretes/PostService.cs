@@ -13,6 +13,11 @@ namespace Homeworkfive.Business.Concretes
     {
         private readonly IRepository<Post> repository;
         private readonly IUnitOfWork unitOfWork;
+
+
+
+
+
         public PostService(
          IRepository<Post> repository,
          IUnitOfWork unitOfWork
