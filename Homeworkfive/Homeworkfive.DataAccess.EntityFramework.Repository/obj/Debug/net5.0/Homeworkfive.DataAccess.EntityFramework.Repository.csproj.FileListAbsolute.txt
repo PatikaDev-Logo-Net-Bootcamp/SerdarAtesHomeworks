@@ -1,0 +1,17 @@
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\bin\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.deps.json
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\bin\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\bin\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.csproj.AssemblyReference.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.AssemblyInfoInputs.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.AssemblyInfo.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\refint\Homeworkfive.DataAccess.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\ref\Homeworkfive.DataAccess.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\bin\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\bin\Debug\net5.0\Homeworkfive.Domain.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\bin\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\bin\Debug\net5.0\Homeworkfive.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.DataAccess.EntityFramework.Repository\obj\Debug\net5.0\Homeworkfive.DataAccess.EntityFramework.Repository.csproj.CopyComplete

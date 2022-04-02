@@ -1,0 +1,12 @@
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\bin\Debug\net5.0\Homeworkfive.Domain.deps.json
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\bin\Debug\net5.0\Homeworkfive.Domain.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\bin\Debug\net5.0\Homeworkfive.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\Homeworkfive.Domain.csproj.AssemblyReference.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\Homeworkfive.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\Homeworkfive.Domain.AssemblyInfoInputs.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\Homeworkfive.Domain.AssemblyInfo.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\Homeworkfive.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\Homeworkfive.Domain.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\refint\Homeworkfive.Domain.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\Homeworkfive.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\Homeworkfive\Homeworkfive.Domain\obj\Debug\net5.0\ref\Homeworkfive.Domain.dll
