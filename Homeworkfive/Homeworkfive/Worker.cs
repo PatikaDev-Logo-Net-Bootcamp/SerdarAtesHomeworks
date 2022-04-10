@@ -22,8 +22,10 @@ namespace Homeworkfive
         public Worker(Lazy<IPostService> postService)
         {
             _postService = postService;
+          
 
-        
+
+
         }
         public override Task StartAsync(CancellationToken cancellationToken)
         {
@@ -49,12 +51,10 @@ namespace Homeworkfive
             httpClient.BaseAddress = new Uri("http://jsonplaceholder.typicode.com/");
             while (!stoppingToken.IsCancellationRequested)
             {
-    
-              
+                            
 
                     var posts = await httpClient.GetFromJsonAsync<Post[]>("posts");
                     foreach (var post in posts)
-
                     _postService.Value.AddPost(new Post
                     {
                         postid = post.id,
