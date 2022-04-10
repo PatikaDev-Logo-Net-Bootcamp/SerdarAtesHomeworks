@@ -1,0 +1,17 @@
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.deps.json
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.pdb
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj.AssemblyReference.cache
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.AssemblyInfoInputs.cache
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.AssemblyInfo.cs
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\refint\ApartmentManagement.DataAcces.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.pdb
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ref\ApartmentManagement.DataAcces.EntityFramework.Repository.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\bin\Debug\net5.0\ApartmentManagement.Domain.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.pdb
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\bin\Debug\net5.0\ApartmentManagement.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework.Repository\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj.CopyComplete

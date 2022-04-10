@@ -1,0 +1,12 @@
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\bin\Debug\net5.0\ApartmentManagement.Domain.deps.json
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\bin\Debug\net5.0\ApartmentManagement.Domain.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\bin\Debug\net5.0\ApartmentManagement.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ApartmentManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ApartmentManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ApartmentManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ApartmentManagement.Domain.AssemblyInfo.cs
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ApartmentManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ApartmentManagement.Domain.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\refint\ApartmentManagement.Domain.dll
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ApartmentManagement.Domain.pdb
+C:\Users\Serdar\Documents\GitHub\ApartmentManagement\ApartmentManagement.Domain\obj\Debug\net5.0\ref\ApartmentManagement.Domain.dll
