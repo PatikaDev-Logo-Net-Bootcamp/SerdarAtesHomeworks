@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SumE4Y293dcmU7TVErE4MqhaHPG+CxZsdkHOnH+opYvyBRuAjjrF5gNIWGnaUKkA1++TPZWf3In8V5gOTU6DYQ==",
+  "dgSpecHash": "WPGAqFZ/dM7ZV0E66Y3DHHFTDgmkoEKOkScYlVRygrgsNVyjXmxR8ioH5A4oAmmvvBeBI2ssI5M//8H7+DLTKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj",
+  "projectFilePath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Serdar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.15\\microsoft.aspnetcore.cryptography.internal.5.0.15.nupkg.sha512",
     "C:\\Users\\Serdar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.15\\microsoft.aspnetcore.cryptography.keyderivation.5.0.15.nupkg.sha512",

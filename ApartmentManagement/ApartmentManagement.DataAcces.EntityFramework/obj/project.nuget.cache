@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3V0PJEKO3cOANdYF1yvsTK9kjHnXAUJdtLptQ4zwxCKGtW2ujFPP+eCO5rpAGwe15pql+lGByY6LhvxV19FECw==",
+  "dgSpecHash": "Cfy52DgAnzuxXZBm34khBhPqBJu/OlWpZUQkkaTUMIB9mU3/NcUrVW1FdXGMv5Uo4HOEfLgOvnbP23O7aRdVcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj",
+  "projectFilePath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Serdar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Serdar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.15\\microsoft.aspnetcore.cryptography.internal.5.0.15.nupkg.sha512",

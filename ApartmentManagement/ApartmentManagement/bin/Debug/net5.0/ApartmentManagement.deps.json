@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ApartmentManagement/1.0.0": {
         "dependencies": {
+          "ApartmentManagement.Business": "1.0.0",
           "ApartmentManagement.DataAcces.EntityFramework": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.15",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.15",
@@ -1930,6 +1931,18 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "ApartmentManagement.Business/1.0.0": {
+        "dependencies": {
+          "ApartmentManagement.DataAcces.EntityFramework.Repository": "1.0.0",
+          "ApartmentManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ApartmentManagement.Business.dll": {}
+        },
+        "compile": {
+          "ApartmentManagement.Business.dll": {}
+        }
+      },
       "ApartmentManagement.DataAcces.EntityFramework/1.0.0": {
         "dependencies": {
           "ApartmentManagement.Domain": "1.0.0",
@@ -1942,6 +1955,18 @@
         },
         "compile": {
           "ApartmentManagement.DataAcces.EntityFramework.dll": {}
+        }
+      },
+      "ApartmentManagement.DataAcces.EntityFramework.Repository/1.0.0": {
+        "dependencies": {
+          "ApartmentManagement.DataAcces.EntityFramework": "1.0.0",
+          "ApartmentManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ApartmentManagement.DataAcces.EntityFramework.Repository.dll": {}
+        },
+        "compile": {
+          "ApartmentManagement.DataAcces.EntityFramework.Repository.dll": {}
         }
       },
       "ApartmentManagement.Domain/1.0.0": {
@@ -4550,7 +4575,17 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "ApartmentManagement.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "ApartmentManagement.DataAcces.EntityFramework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApartmentManagement.DataAcces.EntityFramework.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,8 @@
+using ApartmentManagement.Business.Abstracts;
+using ApartmentManagement.Business.Concretes;
 using ApartmentManagement.DataAcces.EntityFramework;
+using ApartmentManagement.DataAcces.EntityFramework.Repository.Abstracts;
+using ApartmentManagement.DataAcces.EntityFramework.Repository.Concretes;
 using ApartmentManagement.Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,6 +41,13 @@ namespace ApartmentManagement
                 .AddDefaultTokenProviders();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<IBlockService, BlockService>();
+            services.AddTransient<IFlatService, FlatService>();
+            services.AddTransient<IBillService, BillService>();
+            services.AddTransient<IMessageService, MessageService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -371,11 +371,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj",
       "projectName": "ApartmentManagement.Domain",
-      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj",
+      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj",
       "packagesPath": "C:\\Users\\Serdar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Serdar\\AppData\\Roaming\\NuGet\\NuGet.Config",

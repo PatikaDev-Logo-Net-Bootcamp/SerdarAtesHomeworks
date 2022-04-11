@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cmEtC5z1ZLmGlf9vEWbQ4qAUOLpaChmZMTtm7OUoy3/wIy8m2M7WM4lDlAyi+ME/wuXrSzhoaLcd+EeTlx7h+Q==",
+  "dgSpecHash": "bc05wJaUpH97sUIFzppb2e0pSMM9PKey3Bf7K9zjexoZ/shVWQgRgJeV0is0fywVxRDmcSmhpg3nhQK4eEXpeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework.Repository\\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj",
+  "projectFilePath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework.Repository\\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Serdar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.15\\microsoft.aspnetcore.cryptography.internal.5.0.15.nupkg.sha512",
     "C:\\Users\\Serdar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.15\\microsoft.aspnetcore.cryptography.keyderivation.5.0.15.nupkg.sha512",

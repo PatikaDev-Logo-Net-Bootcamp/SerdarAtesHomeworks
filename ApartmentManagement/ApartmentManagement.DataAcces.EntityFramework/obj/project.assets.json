@@ -5977,11 +5977,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj",
+      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj",
       "projectName": "ApartmentManagement.DataAcces.EntityFramework",
-      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj",
+      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj",
       "packagesPath": "C:\\Users\\Serdar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\obj\\",
+      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Serdar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5998,8 +5998,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj": {
-              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj"
+            "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj": {
+              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj"
             }
           }
         }

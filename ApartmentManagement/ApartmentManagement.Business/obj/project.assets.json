@@ -5920,11 +5920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj",
+      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj",
       "projectName": "ApartmentManagement.Business",
-      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj",
+      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj",
       "packagesPath": "C:\\Users\\Serdar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Business\\obj\\",
+      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Serdar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5941,11 +5941,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework.Repository\\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj": {
-              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework.Repository\\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj"
+            "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework.Repository\\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj": {
+              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework.Repository\\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj"
             },
-            "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj": {
-              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj"
+            "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj": {
+              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Domain\\ApartmentManagement.Domain.csproj"
             }
           }
         }

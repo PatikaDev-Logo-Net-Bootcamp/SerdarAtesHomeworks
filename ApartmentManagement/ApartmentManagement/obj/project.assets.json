@@ -2144,6 +2144,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "ApartmentManagement.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ApartmentManagement.DataAcces.EntityFramework.Repository": "1.0.0",
+          "ApartmentManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ApartmentManagement.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApartmentManagement.Business.dll": {}
+        }
+      },
       "ApartmentManagement.DataAcces.EntityFramework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2158,6 +2172,20 @@
         },
         "runtime": {
           "bin/placeholder/ApartmentManagement.DataAcces.EntityFramework.dll": {}
+        }
+      },
+      "ApartmentManagement.DataAcces.EntityFramework.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ApartmentManagement.DataAcces.EntityFramework": "1.0.0",
+          "ApartmentManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ApartmentManagement.DataAcces.EntityFramework.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApartmentManagement.DataAcces.EntityFramework.Repository.dll": {}
         }
       },
       "ApartmentManagement.Domain/1.0.0": {
@@ -7510,10 +7538,20 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "ApartmentManagement.Business/1.0.0": {
+      "type": "project",
+      "path": "../ApartmentManagement.Business/ApartmentManagement.Business.csproj",
+      "msbuildProject": "../ApartmentManagement.Business/ApartmentManagement.Business.csproj"
+    },
     "ApartmentManagement.DataAcces.EntityFramework/1.0.0": {
       "type": "project",
       "path": "../ApartmentManagement.DataAcces.EntityFramework/ApartmentManagement.DataAcces.EntityFramework.csproj",
       "msbuildProject": "../ApartmentManagement.DataAcces.EntityFramework/ApartmentManagement.DataAcces.EntityFramework.csproj"
+    },
+    "ApartmentManagement.DataAcces.EntityFramework.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ApartmentManagement.DataAcces.EntityFramework.Repository/ApartmentManagement.DataAcces.EntityFramework.Repository.csproj",
+      "msbuildProject": "../ApartmentManagement.DataAcces.EntityFramework.Repository/ApartmentManagement.DataAcces.EntityFramework.Repository.csproj"
     },
     "ApartmentManagement.Domain/1.0.0": {
       "type": "project",
@@ -7523,6 +7561,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ApartmentManagement.Business >= 1.0.0",
       "ApartmentManagement.DataAcces.EntityFramework >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.15",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.15",
@@ -7538,11 +7577,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement\\ApartmentManagement.csproj",
+      "projectUniqueName": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement\\ApartmentManagement.csproj",
       "projectName": "ApartmentManagement",
-      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement\\ApartmentManagement.csproj",
+      "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement\\ApartmentManagement.csproj",
       "packagesPath": "C:\\Users\\Serdar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement\\obj\\",
+      "outputPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Serdar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7559,8 +7598,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj": {
-              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj"
+            "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj": {
+              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj"
+            },
+            "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj": {
+              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj"
             }
           }
         }
