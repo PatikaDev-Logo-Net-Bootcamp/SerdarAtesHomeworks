@@ -9,7 +9,6 @@ namespace ApartmentManagement.Business.Abstracts
         List<Block> GetAllBlock();
         void AddBlock(Block block);
         void UpdateBlock(Block block);
-        Block GetById(int id);
         void DeleteBlock(Block block);
     }
 }

@@ -4,8 +4,6 @@ using ApartmentManagement.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApartmentManagement.Business.Concretes
 {
@@ -39,8 +37,21 @@ namespace ApartmentManagement.Business.Concretes
 
         public void UpdateBill(Bill bill)
         {
-            repository.Update(bill);
-            unitOfWork.Commit();
+            try
+            {
+                if (bill == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                repository.Update(bill);
+                unitOfWork.Commit();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

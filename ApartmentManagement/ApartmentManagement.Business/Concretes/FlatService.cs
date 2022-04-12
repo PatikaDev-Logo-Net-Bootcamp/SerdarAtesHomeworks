@@ -3,6 +3,7 @@ using ApartmentManagement.Business.DTOs;
 using ApartmentManagement.DataAcces.EntityFramework.Repository.Abstracts;
 using ApartmentManagement.Domain;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -38,8 +39,21 @@ namespace ApartmentManagement.Business.Concretes
 
         public void UpdateFlats(Flats flat)
         {
-            repository.Update(flat);
-            unitOfWork.Commit();
+            try
+            {
+                if (flat == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                repository.Update(flat);
+                unitOfWork.Commit();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public List<FlatDto> GetFlatsWithUsersAndBlocks()

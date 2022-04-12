@@ -4,6 +4,7 @@ using ApartmentManagement.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ApartmentManagement.Controllers
@@ -49,12 +50,53 @@ namespace ApartmentManagement.Controllers
                OwnerId=flat.OwnerId,
                BlockId=flat.BlockId,
                FlatNo=flat.FlatNo,
-               Floor=flat.Floor,
-
-               
+               Floor=flat.Floor,     
             };
             flatService.AddFlats(flats);
             return RedirectToAction("Index","Flat");
+        }
+        [HttpPost]
+        public IActionResult UpdateFlat([FromForm] FlatUpdateDto flat)
+        {
+            var flats = new Flats
+            {
+                Id = flat.Id,
+                Type = flat.Type,
+                IsEmpty = flat.IsEmpty,
+                OwnerId = flat.OwnerId,
+                BlockId = flat.BlockId,
+                FlatNo = flat.FlatNo,
+                Floor = flat.Floor,
+            };
+            flatService.UpdateFlats(flats);
+            return RedirectToAction("Index", "Flat");
+        }
+        [HttpGet]
+        public async Task<IActionResult> UpdateFlatAsync(int id)
+        {
+
+            var model = flatService.GetFlatsWithUsersAndBlocks().ToList().Where(x=>x.Id==id).FirstOrDefault();
+            var blocks = blockService.GetAllBlock();
+            var users = await userManager.Users.ToListAsync();
+            var elemets = new FlatUpdateDto
+            {
+               Id=model.Id,
+                FlatNo=model.FlatNumber,
+                Floor=model.Floor,
+                IsEmpty=model.IsEmpty,
+                Type=model.FlatType,
+                Blocks = blocks,
+                Owner = users,
+            };
+            return View(elemets);
+        }
+        [HttpGet]
+        public IActionResult DeleteFlats(int id)
+        {
+
+            var flat = flatService.GetAllFlats().ToList().Where(x => x.Id == id).FirstOrDefault();
+            flatService.DeleteFlats(flat);
+            return RedirectToAction("Index", "Flat");
         }
     }
 }

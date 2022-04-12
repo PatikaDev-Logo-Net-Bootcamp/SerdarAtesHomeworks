@@ -1,6 +1,7 @@
 ﻿using ApartmentManagement.Business.Abstracts;
 using ApartmentManagement.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace ApartmentManagement.Controllers
 {
@@ -46,14 +47,14 @@ namespace ApartmentManagement.Controllers
         public IActionResult UpdateBlock(int id)
         {
 
-            var model =blockService.GetById(id);
+            var model = blockService.GetAllBlock().ToList().Where(x => x.Id == id).FirstOrDefault();
             return View(model);
         }
         [HttpGet]
         public IActionResult DeleteBlock(int id)
         {
 
-            var block = blockService.GetById(id);
+            var block = blockService.GetAllBlock().ToList().Where(x=>x.Id== id).FirstOrDefault();
             blockService.DeleteBlock(block);
             return RedirectToAction("Index", "block");
         }

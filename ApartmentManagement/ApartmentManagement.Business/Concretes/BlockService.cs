@@ -37,12 +37,6 @@ namespace ApartmentManagement.Business.Concretes
         {
             return repository.Get().ToList();
         }
-
-        public Block GetById(int id)
-        {
-            return repository.Get().Where(x=>x.Id == id).FirstOrDefault();
-        }
-
         public void UpdateBlock(Block block)
         {
             try

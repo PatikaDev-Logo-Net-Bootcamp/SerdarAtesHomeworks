@@ -414,3 +414,4 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\AddFlat.cshtml.g.cs
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\Index.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\UpdateFlat.cshtml.g.cs

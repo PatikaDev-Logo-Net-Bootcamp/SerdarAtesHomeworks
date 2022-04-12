@@ -1,19 +1,20 @@
 ﻿@using ApartmentManagement.Business.DTOs
-@model FlatAddDto
+@model FlatUpdateDto
+
 @{
-    ViewData["Title"] = "AddFlat";
+    ViewData["Title"] = "UpdateFlat";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>AddFlat</h1>
+<h1>UpdateFlat</h1>
 
 <h4>Flats</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AddFlat">
+        <form asp-action="UpdateFlat">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+      <div class="form-group">
                 <label asp-for="BlockId" class="control-label"></label>
                 <select asp-for="BlockId" class ="form-control" asp-items="@(new SelectList(Model.Blocks, "Id", "BlockName"))"></select>
             </div>
@@ -27,12 +28,11 @@
                 <input asp-for="Type" class="form-control" />
                 <span asp-validation-for="Type" class="text-danger"></span>
             </div>
-              <div class="form-group">
+            <div class="form-group">
                 <label asp-for="Floor" class="control-label"></label>
                 <input asp-for="Floor" class="form-control" />
                 <span asp-validation-for="Floor" class="text-danger"></span>
             </div>
-   
             <div class="form-group">
                 <label asp-for="FlatNo" class="control-label"></label>
                 <input asp-for="FlatNo" class="form-control" />
@@ -40,14 +40,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="OwnerId" class="control-label"></label>
-                <select asp-for="OwnerId" class ="form-control" asp-items="@(new SelectList(Model.Owner, "Id", "FirstName"))">
-                      <option value="null">Boş</option>
-                </select>
-              
+                <select asp-for="OwnerId" class ="form-control" asp-items="@(new SelectList(Model.Owner, "Id", "FirstName"))"></select>
             </div>
-       
+                <input type="hidden" asp-for="Id">
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
