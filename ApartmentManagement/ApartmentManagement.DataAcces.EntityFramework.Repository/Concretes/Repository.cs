@@ -22,6 +22,7 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Repository.Concretes
 
             if (entity != null)
             {
+             
                 entity.IsDeleted = true;
                 unitOfWork.Context.Entry(entity).State = EntityState.Modified;
             }
@@ -29,6 +30,7 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Repository.Concretes
         }
         public IQueryable<T> Get()
         {
+          
             return unitOfWork.Context.Set<T>().Where(x => !x.IsDeleted).AsQueryable();
         }
         public void Update(T entity)

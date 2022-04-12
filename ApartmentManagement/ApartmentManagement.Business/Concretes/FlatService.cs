@@ -1,12 +1,10 @@
 ﻿using ApartmentManagement.Business.Abstracts;
+using ApartmentManagement.Business.DTOs;
 using ApartmentManagement.DataAcces.EntityFramework.Repository.Abstracts;
 using ApartmentManagement.Domain;
-using ApartmentManagement.Domain.Entities;
-using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApartmentManagement.Business.Concretes
 {
@@ -22,6 +20,7 @@ namespace ApartmentManagement.Business.Concretes
         }
         public void AddFlats(Flats flat)
         {
+       
             repository.Add(flat);
             unitOfWork.Commit();
         }
@@ -41,6 +40,24 @@ namespace ApartmentManagement.Business.Concretes
         {
             repository.Update(flat);
             unitOfWork.Commit();
+        }
+
+        public List<FlatDto> GetFlatsWithUsersAndBlocks()
+        {
+            
+            var AllFlats = repository.Get().Include(x=>x.Owner).Include(x=>x.Blocks).OrderBy(x=>x.Blocks.BlockName).ToList();
+            var flats = AllFlats.Select(x => new FlatDto()
+            {
+                Id = x.Id,
+                BlockName=x.Blocks.BlockName,
+                FlatType=x.Type,
+                Floor=x.Floor,
+                FlatNumber=x.FlatNo,
+                FullName=x.Owner.FirstName +" "+ x.Owner.LastName,
+                IsEmpty=x.IsEmpty,
+            }).ToList();
+            return flats;
+
         }
     }
 }

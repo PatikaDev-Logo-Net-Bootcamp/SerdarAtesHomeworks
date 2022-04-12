@@ -409,3 +409,8 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Block\Index.cshtml.g.cs
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\refint\ApartmentManagement.dll
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Block\UpdateBlock.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\AddFlat.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\Index.cshtml.g.cs

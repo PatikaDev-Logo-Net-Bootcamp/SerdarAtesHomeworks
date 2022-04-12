@@ -4,6 +4,7 @@ using ApartmentManagement.DataAcces.EntityFramework;
 using ApartmentManagement.DataAcces.EntityFramework.Repository.Abstracts;
 using ApartmentManagement.DataAcces.EntityFramework.Repository.Concretes;
 using ApartmentManagement.Domain;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -39,15 +40,16 @@ namespace ApartmentManagement
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddFluentValidation(x=> x.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddRazorPages();
-
+   
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IBlockService, BlockService>();
             services.AddTransient<IFlatService, FlatService>();
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IMessageService, MessageService>();
+            //services.AddTransient<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

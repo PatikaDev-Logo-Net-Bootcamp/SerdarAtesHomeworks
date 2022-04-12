@@ -20,7 +20,6 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.runtimeconfig.json
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.runtimeconfig.dev.json
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.dll
-C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\bin\Debug\net5.0\ref\ApartmentManagement.DataAcces.EntityFramework.dll
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\bin\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.pdb
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\bin\Debug\net5.0\ApartmentManagement.Domain.dll
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\bin\Debug\net5.0\ApartmentManagement.Domain.pdb
@@ -34,3 +33,4 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\obj\Debug\net5.0\ref\ApartmentManagement.DataAcces.EntityFramework.dll
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.pdb
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\obj\Debug\net5.0\ApartmentManagement.DataAcces.EntityFramework.genruntimeconfig.cache
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.DataAcces.EntityFramework\obj\Debug\net5.0\refint\ApartmentManagement.DataAcces.EntityFramework.dll

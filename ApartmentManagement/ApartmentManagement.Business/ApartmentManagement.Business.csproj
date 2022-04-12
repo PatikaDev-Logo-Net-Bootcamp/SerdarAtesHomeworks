@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ApartmentManagement.DataAcces.EntityFramework.Repository\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj" />
     <ProjectReference Include="..\ApartmentManagement.Domain\ApartmentManagement.Domain.csproj" />
   </ItemGroup>
