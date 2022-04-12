@@ -49,6 +49,7 @@ namespace ApartmentManagement.Controllers
                OwnerId=flat.OwnerId,
                BlockId=flat.BlockId,
                FlatNo=flat.FlatNo,
+               Floor=flat.Floor,
 
                
             };
