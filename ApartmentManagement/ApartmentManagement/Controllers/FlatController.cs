@@ -80,7 +80,7 @@ namespace ApartmentManagement.Controllers
             var users = await userManager.Users.ToListAsync();
             var elemets = new FlatUpdateDto
             {
-               Id=model.Id,
+                Id=model.Id,
                 FlatNo=model.FlatNumber,
                 Floor=model.Floor,
                 IsEmpty=model.IsEmpty,

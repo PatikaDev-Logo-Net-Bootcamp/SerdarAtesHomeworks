@@ -8,8 +8,6 @@ namespace ApartmentManagement.Domain.Entities
 {
     public class Bill:BaseEntity
     {
-        public string Type { get; set; }
-        public string Name { get; set; }
         public bool IsActive { get; set; }
         public decimal Price { get; set; }
         public int FlatId { get; set; }

@@ -1,0 +1,68 @@
+﻿@using ApartmentManagement.Business.DTOs
+@model List<BillDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="AddBill">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                ÖDENMİŞ Mİ
+            </td>
+            <td>
+                Bedel
+            </td>
+            <td>
+                İsim
+            </td>
+            <td>
+                Daire Numarası
+            </td>
+            <td>
+                Tarih
+            </td>
+            <td>
+                Fatura Türü
+            </td>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlatNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillTypeName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

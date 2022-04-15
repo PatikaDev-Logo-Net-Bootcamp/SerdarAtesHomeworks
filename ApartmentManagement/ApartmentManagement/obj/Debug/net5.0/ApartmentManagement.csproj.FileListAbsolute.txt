@@ -415,3 +415,8 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\AddFlat.cshtml.g.cs
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\Index.cshtml.g.cs
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Flat\UpdateFlat.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\BillType\Index.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\BillType\AddBillType.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\BillType\UpdateBillType.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Bill\Index.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Bill\AddBill.cshtml.g.cs

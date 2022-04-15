@@ -119,14 +119,8 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Type")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -183,19 +177,22 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsRead")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ReceiverId")
-                        .HasColumnType("int");
+                    b.Property<string>("ReceiverId")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SenderId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("SendTime")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("content")
+                    b.Property<string>("SenderId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -223,6 +220,9 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsEmpty")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsOwner")
                         .HasColumnType("bit");
 
                     b.Property<string>("OwnerId")

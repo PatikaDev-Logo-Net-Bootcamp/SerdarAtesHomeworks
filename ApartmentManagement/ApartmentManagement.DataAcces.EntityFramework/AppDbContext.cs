@@ -17,6 +17,7 @@ namespace ApartmentManagement.DataAcces.EntityFramework
         public DbSet<Flats> Flats { get; set; }
         public DbSet<BillType> BillTypes { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Bill> Bill { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

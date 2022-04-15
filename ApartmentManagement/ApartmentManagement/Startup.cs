@@ -49,7 +49,8 @@ namespace ApartmentManagement
             services.AddTransient<IFlatService, FlatService>();
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IMessageService, MessageService>();
-            //services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IBillTypeService, BillTypeService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
