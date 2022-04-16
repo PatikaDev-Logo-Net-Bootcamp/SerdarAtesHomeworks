@@ -2,6 +2,7 @@
 using ApartmentManagement.Business.DTOs;
 using ApartmentManagement.Domain;
 using ApartmentManagement.Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -64,15 +65,6 @@ namespace ApartmentManagement.Controllers
         public IActionResult AddBillMultiple([FromForm] BillAddDto bill)
         {
             var flats = flatService.GetAllFlats();
-            //var bills = flats.Select(x=> new Bill()
-            //{
-
-            //    BillDate = bill.BillDate,
-            //    BillTypeId = bill.BillTypeId,
-            //    FlatId = x.Id,
-            //    Price = bill.Price,
-
-            //}).ToList();
             for(int i = 0; i < flats.Count; i++)
             {
                 var bills = new Bill() {
@@ -84,44 +76,23 @@ namespace ApartmentManagement.Controllers
 
                 billService.AddBillMultiple(bills);
             }
-
-
-
-
             return RedirectToAction("Index", "Bill");
         }
         [HttpGet]
-        public IActionResult GetPaidBills()
+        public async Task<IActionResult> GetUserPaidBills()
         {
-            var bills = billService.GetAllPaidBillsWithFlatsAndUsers();
+
+            var current_User = await userManager.GetUserAsync(HttpContext.User);
+            var bills = billService.GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive == true && x.UserId==current_User.Id).ToList();
             return View(bills);
         }
         [HttpGet]
-        public IActionResult GetNotPaidBills()
+        public async Task<IActionResult> GetUserNotPaidBills()
         {
-            var bills = billService.GetAllNotPaidActiveBillsWithFlatsAndUsers();
+
+            var current_User = await userManager.GetUserAsync(HttpContext.User);
+            var bills = billService.GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive == false && x.UserId == current_User.Id).ToList();
             return View(bills);
         }
-        //[HttpGet]
-        //public IActionResult GetUserPaidBills()
-        //{
-        //    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //    var bills = billService.GetAllUsersPaidBillsWithFlatsAndUsers(userId);
-        //    return View(bills);
-        //}
-        //[HttpGet]
-        //public IActionResult GetUserNotPaidBills()
-        //{
-        //    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //    var bills = billService.GetAllUsersPaidBillsWithFlatsAndUsers(userId);
-        //    return View(bills);
-        //}
-
-
-
-
-
-
-
     }
 }

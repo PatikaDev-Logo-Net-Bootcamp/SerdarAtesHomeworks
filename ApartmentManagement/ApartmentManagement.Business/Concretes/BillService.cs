@@ -68,6 +68,7 @@ namespace ApartmentManagement.Business.Concretes
             var Bills = AllBills.Select(x => new BillDto()
             {
                 Id = x.Id,
+                UserId=x.Flat.Owner.Id,
                 IsActive = x.IsActive,
                 Price = x.Price,
                 BillDate=x.BillDate,
@@ -75,48 +76,6 @@ namespace ApartmentManagement.Business.Concretes
                 FlatNumber = x.Flat.FlatNo,
                 FullName = x.Flat.Owner.FirstName+" "+x.Flat.Owner.LastName,
              
-            }).ToList();
-            return Bills;
-        }
-        public List<BillDto> GetAllPaidBillsWithFlatsAndUsers()
-        {
-            var PayedBills = GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive = true).ToList();
-            return PayedBills;
-        }
-        public List<BillDto> GetAllNotPaidActiveBillsWithFlatsAndUsers()
-        {
-            var NotPayed = GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive = false).ToList();
-            return NotPayed;
-        }
-        public List<BillDto> GetAllUsersPaidBillsWithFlatsAndUsers(int id)
-        {
-            var PayedBills = repository.Get().Include(x => x.BillType).Include(x => x.Flat).ThenInclude(x => x.Owner).Where(x=>x.Flat.Id==id&&x.IsActive==true).ToList();
-            var Bills = PayedBills.Select(x => new BillDto()
-            {
-                Id = x.Id,
-                IsActive = x.IsActive,
-                Price = x.Price,
-                BillDate = x.BillDate,
-                BillTypeName = x.BillType.BillTypeName,
-                FlatNumber = x.Flat.FlatNo,
-                FullName = x.Flat.Owner.FirstName + " " + x.Flat.Owner.LastName,
-
-            }).ToList();
-            return Bills;
-        }
-        public List<BillDto> GetAllUsersNotPaidActiveBillsWithFlatsAndUsers(int id)
-        {
-            var NotPayedBills = repository.Get().Include(x => x.BillType).Include(x => x.Flat).ThenInclude(x => x.Owner).Where(x => x.Flat.Id == id && x.IsActive == false).ToList();
-            var Bills = NotPayedBills.Select(x => new BillDto()
-            {
-                Id = x.Id,
-                IsActive = x.IsActive,
-                Price = x.Price,
-                BillDate = x.BillDate,
-                BillTypeName = x.BillType.BillTypeName,
-                FlatNumber = x.Flat.FlatNo,
-                FullName = x.Flat.Owner.FirstName + " " + x.Flat.Owner.LastName,
-
             }).ToList();
             return Bills;
         }

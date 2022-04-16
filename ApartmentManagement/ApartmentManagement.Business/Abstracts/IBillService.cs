@@ -15,10 +15,6 @@ namespace ApartmentManagement.Business.Abstracts
         void AddBillMultiple(Bill bill);
         void UpdateBill(Bill bill);
         List<BillDto> GetAllBillsWithFlatsAndUsers();
-        List<BillDto> GetAllPaidBillsWithFlatsAndUsers();
-        List<BillDto> GetAllNotPaidActiveBillsWithFlatsAndUsers();
-        List<BillDto> GetAllUsersPaidBillsWithFlatsAndUsers(int id);
-        List<BillDto> GetAllUsersNotPaidActiveBillsWithFlatsAndUsers(int id);
         void DeleteBill(Bill bill);
     }
 }

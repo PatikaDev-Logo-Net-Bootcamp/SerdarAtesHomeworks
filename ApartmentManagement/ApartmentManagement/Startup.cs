@@ -50,6 +50,7 @@ namespace ApartmentManagement
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IMessageService, MessageService>();
             services.AddTransient<IBillTypeService, BillTypeService>();
+            services.AddHttpContextAccessor();
 
         }
 

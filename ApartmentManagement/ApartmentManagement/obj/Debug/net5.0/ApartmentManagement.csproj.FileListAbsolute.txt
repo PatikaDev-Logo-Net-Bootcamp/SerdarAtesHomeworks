@@ -420,3 +420,6 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\BillType\UpdateBillType.cshtml.g.cs
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Bill\Index.cshtml.g.cs
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Bill\AddBill.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\User\AddUser.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\User\UpdateUser.cshtml.g.cs
