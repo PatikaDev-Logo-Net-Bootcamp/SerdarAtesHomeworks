@@ -8,10 +8,11 @@ namespace ApartmentManagement.Domain.Entities
 {
     public class Message:BaseEntity
     {
-        public string SenderId { get; set; }
-        public string ReceiverId { get; set; }
-        public DateTime SendTime { get; set; }
+        public string FromUserId { get; set; }
+        public string ToUserId { get; set; }
         public string Content { get; set; }
-        public bool IsRead { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public virtual ApplicationUser FromUser { get; set; }
+        public virtual ApplicationUser ToUser { get; set; }
     }
 }

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentManagement.DataAcc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentManagement.DataAcces.EntityFramework.Repository", "ApartmentManagement.DataAcces.EntityFramework.Repository\ApartmentManagement.DataAcces.EntityFramework.Repository.csproj", "{46165362-4804-4EB6-B580-526EB2D89900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentManagement.Business", "ApartmentManagement.Business\ApartmentManagement.Business.csproj", "{A8B8C594-9CF9-4294-8E63-BE7A38364D0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentManagement.Business", "ApartmentManagement.Business\ApartmentManagement.Business.csproj", "{A8B8C594-9CF9-4294-8E63-BE7A38364D0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

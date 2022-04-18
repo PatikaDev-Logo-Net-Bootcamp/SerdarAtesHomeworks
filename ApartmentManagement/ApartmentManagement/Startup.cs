@@ -51,6 +51,7 @@ namespace ApartmentManagement
             services.AddTransient<IMessageService, MessageService>();
             services.AddTransient<IBillTypeService, BillTypeService>();
             services.AddHttpContextAccessor();
+            services.AddSignalR();
 
         }
 
@@ -61,6 +62,7 @@ namespace ApartmentManagement
             {
                 app.UseDeveloperExceptionPage();
                 app.UseMigrationsEndPoint();
+             
             }
             else
             {

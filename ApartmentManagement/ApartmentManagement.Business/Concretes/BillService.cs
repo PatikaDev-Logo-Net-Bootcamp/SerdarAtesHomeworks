@@ -25,14 +25,6 @@ namespace ApartmentManagement.Business.Concretes
             repository.Add(bill);
             unitOfWork.Commit();
         }
-        public void AddBillMultiple(Bill bill)
-        {
-
-            repository.Add(bill);
-            unitOfWork.Commit();
-
-        }
-
         public void DeleteBill(Bill bill)
         {
             repository.Delete(bill);

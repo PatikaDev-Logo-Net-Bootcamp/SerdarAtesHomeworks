@@ -180,22 +180,23 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FromUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsRead")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ReceiverId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("SendTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("SenderId")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("ToUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FromUserId");
+
+                    b.HasIndex("ToUserId");
 
                     b.ToTable("Messages");
                 });
@@ -390,6 +391,21 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Migrations
                     b.Navigation("Flat");
                 });
 
+            modelBuilder.Entity("ApartmentManagement.Domain.Entities.Message", b =>
+                {
+                    b.HasOne("ApartmentManagement.Domain.ApplicationUser", "FromUser")
+                        .WithMany("ChatMessagesFromUsers")
+                        .HasForeignKey("FromUserId");
+
+                    b.HasOne("ApartmentManagement.Domain.ApplicationUser", "ToUser")
+                        .WithMany("ChatMessagesToUsers")
+                        .HasForeignKey("ToUserId");
+
+                    b.Navigation("FromUser");
+
+                    b.Navigation("ToUser");
+                });
+
             modelBuilder.Entity("ApartmentManagement.Domain.Flats", b =>
                 {
                     b.HasOne("ApartmentManagement.Domain.Entities.Block", "Blocks")
@@ -461,6 +477,10 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Migrations
 
             modelBuilder.Entity("ApartmentManagement.Domain.ApplicationUser", b =>
                 {
+                    b.Navigation("ChatMessagesFromUsers");
+
+                    b.Navigation("ChatMessagesToUsers");
+
                     b.Navigation("Flats");
                 });
 

@@ -1,10 +1,12 @@
 ﻿using ApartmentManagement.Business.Abstracts;
 using ApartmentManagement.DataAcces.EntityFramework.Repository.Abstracts;
+using ApartmentManagement.Domain;
 using ApartmentManagement.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace ApartmentManagement.Business.Concretes
@@ -19,21 +21,49 @@ namespace ApartmentManagement.Business.Concretes
             this.repository = repository;
             this.unitOfWork = unitOfWork;
         }
-        public void AddMessage(Message message)
+
+        public async Task<List<Message>> GetConversationAsync(ClaimsPrincipal User,string contactId)
         {
-            repository.Add(message);
-            unitOfWork.Commit();
+            var userId = User.Claims.Where(a => a.Type == ClaimTypes.NameIdentifier).Select(a => a.Value).FirstOrDefault();
+            var messages = await unitOfWork.Context.Messages
+                    .Where(h => (h.FromUserId == contactId && h.ToUserId == userId) || (h.FromUserId == userId && h.ToUserId == contactId))
+                    .OrderBy(a => a.CreatedDate)
+                    .Include(a => a.FromUser)
+                    .Include(a => a.ToUser)
+                    .Select(x => new Message
+                    {
+                        FromUserId = x.FromUserId,
+                        Content = x.Content,
+                        CreatedDate = x.CreatedDate,
+                        Id = x.Id,
+                        ToUserId = x.ToUserId,
+                        ToUser = x.ToUser,
+                        FromUser = x.FromUser
+                    }).ToListAsync();
+            return messages;
+        }
+        public async Task<ApplicationUser> GetUserDetailsAsync(string userId)
+        {
+            var user = await unitOfWork.Context.Users.Where(user => user.Id == userId).FirstOrDefaultAsync();
+            return user;
         }
 
-        public void DeleteMessage(Message message)
+        public async Task<List<ApplicationUser>> GetUsersAsync(ClaimsPrincipal User)
         {
-            repository.Delete(message);
-            unitOfWork.Commit();
+            var userId = User.Claims.Where(a => a.Type == ClaimTypes.NameIdentifier).Select(a => a.Value).FirstOrDefault();
+            var allUsers = await unitOfWork.Context.Users.Where(user => user.Id != userId).ToListAsync();
+
+            return allUsers;
         }
 
-        public List<Message> GetAllMessage()
+        public async Task<int> SaveMessageAsync(Message message)
         {
-            return repository.Get().ToList();
+            var userId = ClaimsPrincipal.Current.Claims.Where(a => a.Type == ClaimTypes.NameIdentifier).Select(a => a.Value).FirstOrDefault();
+            message.FromUserId = userId;
+            message.CreatedDate = DateTime.Now;
+            message.ToUser = await unitOfWork.Context.Users.Where(user => user.Id == message.ToUserId).FirstOrDefaultAsync();
+            await unitOfWork.Context.Messages.AddAsync(message);
+            return await unitOfWork.Context.SaveChangesAsync();
         }
     }
 }

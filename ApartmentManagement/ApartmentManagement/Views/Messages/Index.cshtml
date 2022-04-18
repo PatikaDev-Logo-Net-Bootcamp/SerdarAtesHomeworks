@@ -1,0 +1,46 @@
+﻿@using ApartmentManagement.Domain
+@model List<ApplicationUser>
+
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                <label>FirstName</label>
+            </th>
+            <th>
+            <label>LastName</label>
+            </th>
+            <th>
+              <label>Email</label>
+            </th>
+            <th>
+               <label>Plaka</label>
+            </th>
+            <th>
+               <label>Tc</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+<tbody>
+    @foreach (var item in Model) {
+        <tr>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+
+
+            <td>
+                <a asp-action="GetConversation" asp-route-id="@item.Id">Mesaj Gönder</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

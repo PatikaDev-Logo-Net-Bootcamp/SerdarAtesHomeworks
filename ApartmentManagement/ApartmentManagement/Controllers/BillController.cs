@@ -40,13 +40,14 @@ namespace ApartmentManagement.Controllers
         {
             var flats = flatService.GetAllFlats();
             var billtypes = billTypeService.GetAllBillType();
-            var elemets = new BillAddDto
+            var elements = new BillAddDto
             {
                 Flat=flats,
                 BillType=billtypes,
             };
-            return View(elemets);
+            return View(elements);
         }
+        
         [HttpPost]
         public IActionResult AddBill ([FromForm] BillAddDto bill)
         {
@@ -64,20 +65,56 @@ namespace ApartmentManagement.Controllers
         [HttpPost]
         public IActionResult AddBillMultiple([FromForm] BillAddDto bill)
         {
+      
             var flats = flatService.GetAllFlats();
-            for(int i = 0; i < flats.Count; i++)
+            for (int i = 0; i < flats.Count; i++)
             {
-                var bills = new Bill() {
+                var bills = new Bill()
+                {
                     BillDate = bill.BillDate,
                     BillTypeId = bill.BillTypeId,
                     FlatId = flats[i].Id,
                     Price = bill.Price,
                 };
 
-                billService.AddBillMultiple(bills);
+                billService.AddBill(bills);
             }
             return RedirectToAction("Index", "Bill");
         }
+        [HttpGet]
+        public IActionResult UpdateBill(int id)
+        {
+            var model = billService.GetAllBillsWithFlatsAndUsers().ToList().Where(x=>x.Id==id).FirstOrDefault();
+            var flats = flatService.GetAllFlats();
+            var billtypes = billTypeService.GetAllBillType();
+            var elements = new BillUpdateDto
+            {
+                FlatNumber=model.FlatNumber,
+                BillTypeName=model.BillTypeName,
+                BillDate=model.BillDate,
+                Price=model.Price,
+                Flat = flats,
+                BillType = billtypes,
+                IsActive=model.IsActive
+            };
+            return View(elements);
+        }
+        [HttpPost]
+        public IActionResult UpdateBill([FromForm] BillUpdateDto bill)
+        {
+            var bills = new Bill
+            {
+                Id = bill.Id,
+                BillDate = bill.BillDate,
+                BillTypeId=bill.BillTypeId,
+                FlatId = bill.FlatId,
+                IsActive=bill.IsActive,
+                Price=bill.Price,
+            };
+            billService.UpdateBill(bills);
+            return RedirectToAction("Index", "Bill");
+        }
+    
         [HttpGet]
         public async Task<IActionResult> GetUserPaidBills()
         {

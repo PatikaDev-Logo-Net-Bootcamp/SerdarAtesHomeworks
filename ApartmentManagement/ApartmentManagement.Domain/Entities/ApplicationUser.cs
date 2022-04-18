@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using ApartmentManagement.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,13 @@ namespace ApartmentManagement.Domain
         public string CarPlateNumber { get; set; }
 
         public List<Flats> Flats { get; set; }
-  
+
+        public virtual ICollection<Message> ChatMessagesFromUsers { get; set; }
+        public virtual ICollection<Message> ChatMessagesToUsers { get; set; }
+        public ApplicationUser()
+        {
+            ChatMessagesFromUsers = new HashSet<Message>();
+            ChatMessagesToUsers = new HashSet<Message>();
+        }
     }
 }
