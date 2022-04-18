@@ -5,6 +5,7 @@ using ApartmentManagement.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -41,8 +42,14 @@ namespace ApartmentManagement.Controllers
         [HttpPost]
         public async  Task<IActionResult> PostMessage([FromForm] Message message)
         {
-            await messageService.SaveMessageAsync(message);
-            return View();
+            await messageService.SaveMessageAsync(User,new Message
+            {
+       
+                Content = message.Content,
+                ToUserId= message.ToUserId,
+                CreatedDate=DateTime.Now,
+            });
+            return RedirectToAction("Index","Messages");
         }
         public async Task<IActionResult> GetConversation(string Id)
         {

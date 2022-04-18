@@ -40,6 +40,15 @@ namespace ApartmentManagement.Business.Concretes
                         ToUser = x.ToUser,
                         FromUser = x.FromUser
                     }).ToListAsync();
+            if(messages.Count==0)
+            {
+                await SaveMessageAsync(User, new Message { 
+                    ToUserId=contactId,
+                    Content=null,
+                    CreatedDate=DateTime.Now,   
+                });
+              return await GetConversationAsync(User,contactId);
+            }
             return messages;
         }
         public async Task<ApplicationUser> GetUserDetailsAsync(string userId)
@@ -56,9 +65,9 @@ namespace ApartmentManagement.Business.Concretes
             return allUsers;
         }
 
-        public async Task<int> SaveMessageAsync(Message message)
+        public async Task<int> SaveMessageAsync(ClaimsPrincipal User, Message message)
         {
-            var userId = ClaimsPrincipal.Current.Claims.Where(a => a.Type == ClaimTypes.NameIdentifier).Select(a => a.Value).FirstOrDefault();
+            var userId = User.Claims.Where(a => a.Type == ClaimTypes.NameIdentifier).Select(a => a.Value).FirstOrDefault();
             message.FromUserId = userId;
             message.CreatedDate = DateTime.Now;
             message.ToUser = await unitOfWork.Context.Users.Where(user => user.Id == message.ToUserId).FirstOrDefaultAsync();

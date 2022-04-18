@@ -13,7 +13,7 @@ namespace ApartmentManagement.Business.Abstracts
     {
         Task<List<ApplicationUser>> GetUsersAsync(ClaimsPrincipal User);
         Task<ApplicationUser> GetUserDetailsAsync(string userId);
-        Task<int> SaveMessageAsync(Message message);
+        Task<int> SaveMessageAsync(ClaimsPrincipal User, Message message);
         Task<List<Message>> GetConversationAsync(ClaimsPrincipal User,string contactId);
 
 

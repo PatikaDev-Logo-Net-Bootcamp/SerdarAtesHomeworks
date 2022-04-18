@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentManagement.DataAcc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApartmentManagement.Business", "ApartmentManagement.Business\ApartmentManagement.Business.csproj", "{A8B8C594-9CF9-4294-8E63-BE7A38364D0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentManagement.PaymentAPI", "ApartmentManagement.PaymentAPI\ApartmentManagement.PaymentAPI.csproj", "{AEF1F018-AD51-4BC3-B1D5-72151D17F5EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A8B8C594-9CF9-4294-8E63-BE7A38364D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8B8C594-9CF9-4294-8E63-BE7A38364D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8B8C594-9CF9-4294-8E63-BE7A38364D0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF1F018-AD51-4BC3-B1D5-72151D17F5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF1F018-AD51-4BC3-B1D5-72151D17F5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF1F018-AD51-4BC3-B1D5-72151D17F5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF1F018-AD51-4BC3-B1D5-72151D17F5EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

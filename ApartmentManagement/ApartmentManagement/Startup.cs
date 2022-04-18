@@ -4,6 +4,7 @@ using ApartmentManagement.DataAcces.EntityFramework;
 using ApartmentManagement.DataAcces.EntityFramework.Repository.Abstracts;
 using ApartmentManagement.DataAcces.EntityFramework.Repository.Concretes;
 using ApartmentManagement.Domain;
+using ApartmentManagement.Models.SignalR;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -53,6 +54,8 @@ namespace ApartmentManagement
             services.AddHttpContextAccessor();
             services.AddSignalR();
 
+           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,14 +80,17 @@ namespace ApartmentManagement
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+
+                endpoints.MapHub<SignalRHub>("/chatHub");
             });
+       
         }
     }
 }

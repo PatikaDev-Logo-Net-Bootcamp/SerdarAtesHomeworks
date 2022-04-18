@@ -14,5 +14,9 @@ namespace ApartmentManagement.Models.SignalR
         {
             await Clients.All.SendAsync("ReceiveChatNotification", message, receiverUserId, senderUserId);
         }
+        public override async Task OnConnectedAsync()
+        {
+            await base.OnConnectedAsync();
+        }
     }
 }
