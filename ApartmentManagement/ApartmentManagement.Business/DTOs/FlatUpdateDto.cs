@@ -14,6 +14,7 @@ namespace ApartmentManagement.Business.DTOs
         public int BlockId { get; set; }
         public IEnumerable<Block> Blocks { get; set; }
         public bool IsEmpty { get; set; }
+        public bool IsOwner { get; set; }
         public string Type { get; set; }
         public string Floor { get; set; }
         public string FlatNo { get; set; }

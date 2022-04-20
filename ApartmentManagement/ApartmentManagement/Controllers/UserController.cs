@@ -1,11 +1,18 @@
-﻿using ApartmentManagement.Business.DTOs;
+﻿using ApartmentManagement.Business.Abstracts;
+using ApartmentManagement.Business.DTOs;
 using ApartmentManagement.Domain;
+using ApartmentManagement.Models.Responses;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Net.Mail;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -17,12 +24,15 @@ namespace ApartmentManagement.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IEmailSender _emailSender;
+        private readonly IBillService billService;
+        private readonly HttpClient _httpClient;
 
-
-        public UserController(UserManager<ApplicationUser> userManager, IEmailSender emailSender)
+        public UserController(UserManager<ApplicationUser> userManager, IEmailSender emailSender, IBillService billService, HttpClient httpClient)
         {
             this.userManager = userManager;
             _emailSender = emailSender;
+            this.billService = billService;
+            _httpClient = httpClient;
         }
 
         [HttpGet]
@@ -38,7 +48,9 @@ namespace ApartmentManagement.Controllers
                     Email = user.Email,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
-                    TcNo = user.TcNumber
+                    TcNo = user.TcNumber,
+                    CarPlateNumber = user.CarPlateNumber,
+                    
                 }
                );
             }
@@ -115,6 +127,61 @@ namespace ApartmentManagement.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> GetUserPaidBills()
+        {
+
+            var current_User = await userManager.GetUserAsync(HttpContext.User);
+            var bills = billService.GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive == true && x.UserId == current_User.Id).ToList();
+            return View(bills);
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetUserNotPaidBills()
+        {
+            var current_User = await userManager.GetUserAsync(HttpContext.User);
+            var bills = billService.GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive == false && x.UserId == current_User.Id).ToList();
+            return View(bills);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddPayment(PaymentDto AddPaymentDto)
+        {
+            var getBill = billService.GetAllBill().Where(x=>x.Id==AddPaymentDto.BillId).FirstOrDefault();
+            AddPaymentDto.Price = getBill.Price;
+            AddPaymentDto.FlatId = getBill.FlatId;
+            AddPaymentDto.BillId = getBill.Id;
+
+            string requestUrl = "https://localhost:44315/api/Payment/AddPayment";
+            HttpResponseMessage httpResponse;
+
+            string requestJson = JsonConvert.SerializeObject(AddPaymentDto);
+            using (var stringContent = new StringContent(requestJson, Encoding.UTF8, "application/json"))
+            {
+                httpResponse = await _httpClient.PostAsync(requestUrl, stringContent);
+                var apiResponse = await httpResponse.Content.ReadAsStringAsync();
+                var resp=JsonConvert.DeserializeObject<PaymentAPIResponse<string>>(apiResponse);
+                if (resp.StatusCode == StatusCodes.Status200OK)
+                {
+                    getBill.IsActive = true;
+                    billService.UpdateBillPayment(getBill);
+
+                    return RedirectToAction("GetUserNotPaidBills");
+                }
+                return RedirectToAction("GetUserNotPaidBills");
+            }
+        }
+        [HttpGet]
+        public IActionResult AddPayment(int id)
+        {
+            var getBill = billService.GetAllBill().Where(x => x.Id == id).FirstOrDefault();
+            return View(new PaymentDto
+            {
+                BillId = getBill.Id,
+                FlatId= getBill.FlatId,
+                Price=getBill.Price
+            });
+        }
+
+
 
 
 

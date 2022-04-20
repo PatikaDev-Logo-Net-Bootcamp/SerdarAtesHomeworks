@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Daireler</h1>
 
 <p>
     <a asp-action="AddFlat">Create New</a>
@@ -22,6 +22,9 @@
             </th>
             <th>
             <label>Doluluk</label>
+            </th>
+             <th>
+            <label>Ev Sahibi mi</label>
             </th>
             <th>
               <label>Tip</label>
@@ -50,6 +53,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.IsEmpty)
             </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.IsOwner)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FlatType)
             </td>
@@ -64,8 +70,8 @@
             </td>
      
             <td>
-                <a asp-action="UpdateFlat" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="DeleteFlats" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="UpdateFlat" asp-route-id="@item.Id">Düzenle</a> |
+                <a asp-action="DeleteFlats" asp-route-id="@item.Id">Sil</a>
             </td>
         </tr>
 }

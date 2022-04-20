@@ -1,3 +1,7 @@
+using ApartmentManagement.PaymentAPI.Models;
+using ApartmentManagement.PaymentAPI.Services.Abstract;
+using ApartmentManagement.PaymentAPI.Services.Concrete;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
@@ -6,9 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using Microsoft.OpenApi.Models;
-using ApartmentManagement.PaymentAPI.Extension;
-using ApartmentManagement.PaymentAPI.DataAcces.Abstract;
-using ApartmentManagement.PaymentAPI.DataAcces.Concrete;
+
 
 namespace ApartmentManagement.PaymentAPI
 {
@@ -24,10 +26,10 @@ namespace ApartmentManagement.PaymentAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
-            services.AddMongoDbSettings(Configuration);
-            services.AddTransient<ICreditCardDal, CreditCartDal>();
+            services.Configure<MongoDbModel>(Configuration.GetSection("MongoDbConfiguration"));
+            services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
+            services.AddScoped<IBillPaymentService, BillPaymentService>();
+            services.AddScoped<ICreditCardService, CreditCardService>();
 
 
 

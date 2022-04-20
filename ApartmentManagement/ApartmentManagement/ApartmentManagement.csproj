@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ApartmentManagement.Business\ApartmentManagement.Business.csproj" />
-    <ProjectReference Include="..\ApartmentManagement.DataAcces.EntityFramework\ApartmentManagement.DataAcces.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

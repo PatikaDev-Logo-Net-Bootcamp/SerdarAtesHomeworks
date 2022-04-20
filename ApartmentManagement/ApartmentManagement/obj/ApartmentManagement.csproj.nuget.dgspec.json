@@ -290,9 +290,6 @@
             "projectReferences": {
               "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj": {
                 "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj"
-              },
-              "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj": {
-                "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj"
               }
             }
           }

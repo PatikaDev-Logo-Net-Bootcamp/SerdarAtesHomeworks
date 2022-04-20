@@ -1,7 +1,7 @@
 ﻿@using ApartmentManagement.Business.DTOs
 @model UserAddDto
 
-<h1>AddUser</h1>
+<h1>Kullanıcı Ekle</h1>
 
 <hr />
 <div class="row">
@@ -11,12 +11,12 @@
 
   
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
+                <label  class="control-label">İsim</label>
                 <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
               <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
+                <label  class="control-label">Soy İsim</label>
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
@@ -32,26 +32,26 @@
                 <span asp-validation-for="TcNo" class="text-danger"></span>
             </div>
                <div class="form-group">
-                <label asp-for="CarPlateNumber" class="control-label"></label>
+                <label class="control-label">Plaka</label>
                 <input asp-for="CarPlateNumber" class="form-control" />
                 <span asp-validation-for="CarPlateNumber" class="text-danger"></span>
             </div>
                <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
+                <label class="control-label">Şifre</label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
        
        
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Listeye Geri Dön</a>
 </div>
 
 @section Scripts {

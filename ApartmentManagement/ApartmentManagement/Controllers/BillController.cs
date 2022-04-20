@@ -62,6 +62,16 @@ namespace ApartmentManagement.Controllers
             billService.AddBill(bills);
             return RedirectToAction("Index", "Bill");
         }
+        [HttpGet]
+        public IActionResult AddBillMultiple()
+        {
+            var billtypes = billTypeService.GetAllBillType();
+            var elements = new BillAddDto
+            {
+                BillType = billtypes,
+            };
+            return View(elements);
+        }
         [HttpPost]
         public IActionResult AddBillMultiple([FromForm] BillAddDto bill)
         {
@@ -115,21 +125,7 @@ namespace ApartmentManagement.Controllers
             return RedirectToAction("Index", "Bill");
         }
     
-        [HttpGet]
-        public async Task<IActionResult> GetUserPaidBills()
-        {
+    
 
-            var current_User = await userManager.GetUserAsync(HttpContext.User);
-            var bills = billService.GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive == true && x.UserId==current_User.Id).ToList();
-            return View(bills);
-        }
-        [HttpGet]
-        public async Task<IActionResult> GetUserNotPaidBills()
-        {
-
-            var current_User = await userManager.GetUserAsync(HttpContext.User);
-            var bills = billService.GetAllBillsWithFlatsAndUsers().Where(x => x.IsActive == false && x.UserId == current_User.Id).ToList();
-            return View(bills);
-        }
     }
 }

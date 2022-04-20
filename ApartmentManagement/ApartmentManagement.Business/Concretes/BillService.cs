@@ -54,6 +54,25 @@ namespace ApartmentManagement.Business.Concretes
                 throw;
             }
         }
+
+        public void UpdateBillPayment(Bill bill)
+        {
+            try
+            {
+                if (bill == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                repository.Update(bill) ;
+                unitOfWork.Commit();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public List<BillDto> GetAllBillsWithFlatsAndUsers()
         {
             var AllBills = repository.Get().Include(x => x.BillType).Include(x => x.Flat).ThenInclude(x => x.Owner).OrderBy(x => x.BillDate).ToList();
@@ -71,6 +90,8 @@ namespace ApartmentManagement.Business.Concretes
             }).ToList();
             return Bills;
         }
+
+
 
      
     }

@@ -33,3 +33,6 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.PaymentAPI\obj\Debug\net5.0\ApartmentManagement.PaymentAPI.pdb
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.PaymentAPI\obj\Debug\net5.0\ApartmentManagement.PaymentAPI.genruntimeconfig.cache
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.PaymentAPI\obj\Debug\net5.0\ref\ApartmentManagement.PaymentAPI.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.PaymentAPI\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.PaymentAPI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement.PaymentAPI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll

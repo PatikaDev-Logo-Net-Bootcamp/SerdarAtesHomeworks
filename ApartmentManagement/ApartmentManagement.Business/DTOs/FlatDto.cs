@@ -14,6 +14,7 @@ namespace ApartmentManagement.Business.DTOs
         public string FlatNumber { get; set; }
         public string FlatType { get; set; }
         public bool IsEmpty { get; set; }
+        public bool IsOwner { get; set; }
         public string FullName { get; set; }
     }
 }

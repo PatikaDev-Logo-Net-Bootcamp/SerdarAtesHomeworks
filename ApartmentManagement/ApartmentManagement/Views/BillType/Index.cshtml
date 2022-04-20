@@ -5,20 +5,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Fatura Türleri</h1>
 
 <p>
-    <a asp-action="AddBillType">Create New</a>
+    <a asp-action="AddBillType">Fatura Türü Ekle</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.BillTypeName)
+               Fatura Türü
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -28,12 +26,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.BillTypeName)
             </td>
+           
             <td>
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-            <td>
-                <a asp-action="UpdateBillType" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="DeleteBillType" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="UpdateBillType" asp-route-id="@item.Id">Düzenle</a> |
+                <a asp-action="DeleteBillType" asp-route-id="@item.Id">Sil</a>
             </td>
         </tr>
 }

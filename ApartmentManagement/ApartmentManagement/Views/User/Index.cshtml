@@ -1,14 +1,16 @@
 ﻿@using ApartmentManagement.Business.DTOs
 @model List<UserDto>
-
+<p>
+    <a asp-action="AddUser">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
              <th>
-                <label>FirstName</label>
+                <label>İsim</label>
             </th>
             <th>
-            <label>LastName</label>
+            <label>Soyisim</label>
             </th>
             <th>
               <label>Email</label>
@@ -43,8 +45,8 @@
             </td>
 
             <td>
-                <a asp-action="UpdateUser" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="DeleteUser" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="UpdateUser" asp-route-id="@item.Id">Düzenle</a> |
+                <a asp-action="DeleteUser" asp-route-id="@item.Id">Sil</a>
             </td>
         </tr>
 }

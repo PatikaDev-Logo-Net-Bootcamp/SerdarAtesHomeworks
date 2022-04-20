@@ -1,0 +1,47 @@
+﻿@using ApartmentManagement.Business.DTOs
+@model BillAddDto
+
+@{
+    ViewData["Title"] = "AddBill";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Çoklu Fatura Ekleme</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddBill">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+      
+
+            <div class="form-group">
+                <label asp-for="BillDate" class="control-label"></label>
+                <input asp-for="BillDate" class="form-control" />
+                <span asp-validation-for="BillDate" class="text-danger"></span>
+            </div>
+       
+                  <label asp-for="BillTypeId">Gider Tipi</label>
+        <select asp-for="BillTypeId" class="form-control"
+                asp-items="@(new SelectList(Model.BillType, "Id", "BillTypeName"))">
+            <option>Lütfen birini seçiniz</option>
+        </select>
+       
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -234,3 +234,7 @@ C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\Apartme
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\ref\ApartmentManagement.dll
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Messages\Index.cshtml.g.cs
 C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Messages\GetConversation.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\User\GetUserPaidBills.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\User\GetUserNotPaidBills.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\User\AddPayment.cshtml.g.cs
+C:\Users\Serdar\Documents\GitHub\SerdarAtesHomeworks\ApartmentManagement\ApartmentManagement\obj\Debug\net5.0\Razor\Views\Bill\AddBillMultiple.cshtml.g.cs

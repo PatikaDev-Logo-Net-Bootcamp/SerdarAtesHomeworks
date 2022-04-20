@@ -7984,7 +7984,6 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "ApartmentManagement.Business >= 1.0.0",
-      "ApartmentManagement.DataAcces.EntityFramework >= 1.0.0",
       "FluentValidation.AspNetCore >= 10.4.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.15",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.15",
@@ -8024,9 +8023,6 @@
           "projectReferences": {
             "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj": {
               "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.Business\\ApartmentManagement.Business.csproj"
-            },
-            "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj": {
-              "projectPath": "C:\\Users\\Serdar\\Documents\\GitHub\\SerdarAtesHomeworks\\ApartmentManagement\\ApartmentManagement.DataAcces.EntityFramework\\ApartmentManagement.DataAcces.EntityFramework.csproj"
             }
           }
         }

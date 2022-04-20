@@ -8,6 +8,7 @@ using ApartmentManagement.Models.SignalR;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -34,6 +35,7 @@ namespace ApartmentManagement
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient();
             services.AddDbContext<AppDbContext>(options =>
                     options.UseSqlServer(
                         Configuration.GetConnectionString("DefaultConnection")));
@@ -51,7 +53,7 @@ namespace ApartmentManagement
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<IMessageService, MessageService>();
             services.AddTransient<IBillTypeService, BillTypeService>();
-            services.AddHttpContextAccessor();
+            
             services.AddSignalR();
 
            

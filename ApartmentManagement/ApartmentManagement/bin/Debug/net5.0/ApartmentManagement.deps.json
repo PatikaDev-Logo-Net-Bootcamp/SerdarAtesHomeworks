@@ -34,7 +34,6 @@
       "ApartmentManagement/1.0.0": {
         "dependencies": {
           "ApartmentManagement.Business": "1.0.0",
-          "ApartmentManagement.DataAcces.EntityFramework": "1.0.0",
           "FluentValidation.AspNetCore": "10.4.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.15",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.15",

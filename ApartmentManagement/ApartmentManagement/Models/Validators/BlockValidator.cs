@@ -8,7 +8,8 @@ namespace ApartmentManagement.Models.Validators
 
         public BlockValidator()
         {
-            RuleFor(x=>x.BlockName).NotNull().WithMessage("Hata");
+            RuleFor(x=>x.BlockName).NotNull();
+            RuleFor(x=>x.MaxFlat).NotNull();
         }
     }
 }

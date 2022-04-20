@@ -47,6 +47,7 @@ namespace ApartmentManagement.Controllers
             {
                Type = flat.Type,
                IsEmpty=flat.IsEmpty,
+               IsOwner=flat.IsOwner,
                OwnerId=flat.OwnerId,
                BlockId=flat.BlockId,
                FlatNo=flat.FlatNo,
@@ -63,6 +64,7 @@ namespace ApartmentManagement.Controllers
                 Id = flat.Id,
                 Type = flat.Type,
                 IsEmpty = flat.IsEmpty,
+                IsOwner = flat.IsOwner,
                 OwnerId = flat.OwnerId,
                 BlockId = flat.BlockId,
                 FlatNo = flat.FlatNo,
