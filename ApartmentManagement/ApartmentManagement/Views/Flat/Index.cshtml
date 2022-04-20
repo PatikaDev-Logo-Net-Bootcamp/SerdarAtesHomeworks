@@ -9,8 +9,14 @@
 <h1>Daireler</h1>
 
 <p>
-    <a asp-action="AddFlat">Create New</a>
+    <a asp-action="AddFlat">Yeni Ekle</a>
 </p>
+    @if(@TempData["Alert"]!=null)
+    {
+         <div class="alert alert-success">
+      <strong> @TempData["Alert"]</strong> 
+      </div>
+    }
 <table class="table">
     <thead>
         <tr>

@@ -1,6 +1,7 @@
 ﻿using ApartmentManagement.Business.Abstracts;
 using ApartmentManagement.Business.DTOs;
 using ApartmentManagement.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApartmentManagement.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class FlatController : Controller
     {
         private readonly IFlatService flatService;
@@ -54,6 +56,7 @@ namespace ApartmentManagement.Controllers
                Floor=flat.Floor,     
             };
             flatService.AddFlats(flats);
+            TempData["Alert"] = "Başarıyla Eklendi";
             return RedirectToAction("Index","Flat");
         }
         [HttpPost]
@@ -71,6 +74,7 @@ namespace ApartmentManagement.Controllers
                 Floor = flat.Floor,
             };
             flatService.UpdateFlats(flats);
+            TempData["Alert"] = "Başarıyla Düzenlendi";
             return RedirectToAction("Index", "Flat");
         }
         [HttpGet]
@@ -86,6 +90,7 @@ namespace ApartmentManagement.Controllers
                 FlatNo=model.FlatNumber,
                 Floor=model.Floor,
                 IsEmpty=model.IsEmpty,
+                IsOwner=model.IsOwner,
                 Type=model.FlatType,
                 Blocks = blocks,
                 Owner = users,
@@ -98,6 +103,7 @@ namespace ApartmentManagement.Controllers
 
             var flat = flatService.GetAllFlats().ToList().Where(x => x.Id == id).FirstOrDefault();
             flatService.DeleteFlats(flat);
+            TempData["Alert"] = "Başarıyla Silindi";
             return RedirectToAction("Index", "Flat");
         }
     }

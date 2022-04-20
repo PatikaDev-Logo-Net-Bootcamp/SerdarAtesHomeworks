@@ -1,10 +1,12 @@
 ﻿using ApartmentManagement.Business.Abstracts;
 using ApartmentManagement.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace ApartmentManagement.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class BillTypeController : Controller
     {
         private readonly IBillTypeService billTypeService;
@@ -26,6 +28,7 @@ namespace ApartmentManagement.Controllers
         public IActionResult AddBillType([FromForm] BillType bill)
         {
             billTypeService.AddBillType(bill);
+            TempData["Alert"] = "Başarıyla Eklendi";
             return RedirectToAction("Index","BillType");
         }
 
@@ -38,6 +41,7 @@ namespace ApartmentManagement.Controllers
         public IActionResult UpdateBillType([FromForm] BillType bill)
         {
             billTypeService.UpdateBillType(bill);
+            TempData["Alert"] = "Başarıyla Düzenlendi";
             return RedirectToAction("Index", "BillType");
         }
         [HttpGet]
@@ -53,6 +57,7 @@ namespace ApartmentManagement.Controllers
 
             var bill = billTypeService.GetAllBillType().ToList().Where(x => x.Id == id).FirstOrDefault();
             billTypeService.DeleteBillType(bill);
+            TempData["Alert"] = "Başarıyla Silindi";
             return RedirectToAction("Index", "BillType");
         }
 

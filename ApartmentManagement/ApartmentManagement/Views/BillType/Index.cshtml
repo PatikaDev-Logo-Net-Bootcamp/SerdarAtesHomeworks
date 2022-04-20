@@ -10,6 +10,12 @@
 <p>
     <a asp-action="AddBillType">Fatura Türü Ekle</a>
 </p>
+    @if(@TempData["Alert"]!=null)
+    {
+         <div class="alert alert-success">
+      <strong> @TempData["Alert"]</strong> 
+      </div>
+    }
 <table class="table">
     <thead>
         <tr>

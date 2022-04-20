@@ -23,9 +23,9 @@ namespace ApartmentManagement.PaymentAPI.Controllers
             CreditCardService = creditCardService;
         }
 
-        private ApiResponse<string> Success(string data)
+        private ApiResponse Success(string data)
         {
-            return new ApiResponse<string>
+            return new ApiResponse
             {
                 Data = data,
                 Message = "İşlem başarılı",
@@ -33,9 +33,9 @@ namespace ApartmentManagement.PaymentAPI.Controllers
             };
         }
 
-        private ApiResponse<string> Error(string errorMessage)
+        private ApiResponse Error(string errorMessage)
         {
-            return new ApiResponse<string>
+            return new ApiResponse
             {
                 Data = null,
                 Message = errorMessage,
@@ -44,7 +44,7 @@ namespace ApartmentManagement.PaymentAPI.Controllers
         }
         [Route("AddPayment")]
         [HttpPost]
-        public async Task<ApiResponse<string>> CreatePayment([FromBody]BillDto createPaymentDto)
+        public async Task<ApiResponse> CreatePayment([FromBody]BillDto createPaymentDto)
         {
             var validator = new BillPaymentValidation();
             var results = validator.Validate(createPaymentDto);

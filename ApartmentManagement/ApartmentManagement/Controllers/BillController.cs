@@ -2,6 +2,7 @@
 using ApartmentManagement.Business.DTOs;
 using ApartmentManagement.Domain;
 using ApartmentManagement.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace ApartmentManagement.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class BillController : Controller
     {
         private readonly IBillService billService;
@@ -60,6 +62,7 @@ namespace ApartmentManagement.Controllers
                 
             };
             billService.AddBill(bills);
+            TempData["Alert"] = "Başarıyla Eklendi";
             return RedirectToAction("Index", "Bill");
         }
         [HttpGet]
@@ -89,6 +92,7 @@ namespace ApartmentManagement.Controllers
 
                 billService.AddBill(bills);
             }
+            TempData["Alert"] = "Başarıyla Eklendi";
             return RedirectToAction("Index", "Bill");
         }
         [HttpGet]
@@ -122,10 +126,20 @@ namespace ApartmentManagement.Controllers
                 Price=bill.Price,
             };
             billService.UpdateBill(bills);
+            TempData["Alert"] = "Başarıyla Düzenlendi";
             return RedirectToAction("Index", "Bill");
         }
-    
-    
+        [HttpGet]
+        public IActionResult DeleteBillType(int id)
+        {
+
+            var bill = billService.GetAllBill().ToList().Where(x => x.Id == id).FirstOrDefault();
+            billService.DeleteBill(bill);
+            TempData["Alert"] = "Başarıyla Silindi";
+            return RedirectToAction("Index", "Bill");
+        }
+
+
 
     }
 }

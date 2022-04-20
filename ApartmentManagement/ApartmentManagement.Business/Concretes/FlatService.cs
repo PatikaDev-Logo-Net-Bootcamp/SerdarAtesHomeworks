@@ -69,6 +69,7 @@ namespace ApartmentManagement.Business.Concretes
                 FlatNumber=x.FlatNo,
                 FullName=x.Owner.FirstName +" "+ x.Owner.LastName,
                 IsEmpty=x.IsEmpty,
+                IsOwner=x.IsOwner,
             }).ToList();
             return flats;
 

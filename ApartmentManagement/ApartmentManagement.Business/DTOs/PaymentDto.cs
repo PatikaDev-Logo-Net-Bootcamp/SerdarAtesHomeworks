@@ -10,9 +10,9 @@ namespace ApartmentManagement.Business.DTOs
     {
   
         public string CardNumber { get; set; }
-        public int ValidMonth { get; set; }
-        public int ValidYear { get; set; }
-        public int Cvv { get; set; }
+        public string ValidMonth { get; set; }
+        public string ValidYear { get; set; }
+        public string Cvv { get; set; }
         public int FlatId { get; set; }
         public int BillId { get; set; }
         public decimal Price { get; set; }

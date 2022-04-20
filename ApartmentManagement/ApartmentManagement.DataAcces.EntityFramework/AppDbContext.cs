@@ -66,6 +66,8 @@ namespace ApartmentManagement.DataAcces.EntityFramework
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
+       
+
         }
     }
 }

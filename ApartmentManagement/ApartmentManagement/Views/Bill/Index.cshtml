@@ -12,6 +12,12 @@
     <a asp-action="AddBill">Fatura Ekle</a>
      <a asp-action="AddBillMultiple">Çoklu Fatura Ekle</a>
 </p>
+    @if(@TempData["Alert"]!=null)
+    {
+         <div class="alert alert-success">
+      <strong> @TempData["Alert"]</strong> 
+      </div>
+    }
 <table class="table">
     <thead>
         <tr>

@@ -2,6 +2,7 @@
 using ApartmentManagement.Business.DTOs;
 using ApartmentManagement.Domain;
 using ApartmentManagement.Models.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -20,19 +21,21 @@ using System.Threading.Tasks;
 
 namespace ApartmentManagement.Controllers
 {
+    [Authorize(Roles = "Admin,Basic")]
     public class UserController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IEmailSender _emailSender;
+
         private readonly IBillService billService;
         private readonly HttpClient _httpClient;
 
-        public UserController(UserManager<ApplicationUser> userManager, IEmailSender emailSender, IBillService billService, HttpClient httpClient)
+        public UserController(UserManager<ApplicationUser> userManager, IEmailSender emailSender, IBillService billService, HttpClient httpClient, SignInManager<ApplicationUser> signInManager)
         {
             this.userManager = userManager;
-            _emailSender = emailSender;
+
             this.billService = billService;
             _httpClient = httpClient;
+
         }
 
         [HttpGet]
@@ -73,6 +76,7 @@ namespace ApartmentManagement.Controllers
             var result = await userManager.CreateAsync(user, userform.Password);
             if (result.Succeeded)
             {
+                TempData["Alert"] = "Başarıyla Eklendi";
                 await userManager.AddToRoleAsync(user, "Basic");
                 return RedirectToAction("Index","User");
             }
@@ -112,6 +116,7 @@ namespace ApartmentManagement.Controllers
             var result = await userManager.UpdateAsync(user);
             if (result.Succeeded)
             {
+                TempData["Alert"] = "Başarıyla Düzenlendi";
                 return RedirectToAction("Index", "User");
             }
             return View();
@@ -123,6 +128,7 @@ namespace ApartmentManagement.Controllers
             var result = await userManager.DeleteAsync(user);
             if (result.Succeeded)
             {
+                TempData["Alert"] = "Başarıyla Silindi";
                 return RedirectToAction("Index", "User");
             }
             return View();
@@ -158,12 +164,12 @@ namespace ApartmentManagement.Controllers
             {
                 httpResponse = await _httpClient.PostAsync(requestUrl, stringContent);
                 var apiResponse = await httpResponse.Content.ReadAsStringAsync();
-                var resp=JsonConvert.DeserializeObject<PaymentAPIResponse<string>>(apiResponse);
+                var resp=JsonConvert.DeserializeObject<PaymentAPIResponse>(apiResponse);
                 if (resp.StatusCode == StatusCodes.Status200OK)
                 {
                     getBill.IsActive = true;
                     billService.UpdateBillPayment(getBill);
-
+                    TempData["Alert"] = "Başarıyla Eklendi";
                     return RedirectToAction("GetUserNotPaidBills");
                 }
                 return RedirectToAction("GetUserNotPaidBills");

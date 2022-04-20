@@ -18,6 +18,8 @@ namespace ApartmentManagement.DataAcces.EntityFramework.Configurations
                 WithMany(y => y.Flats).
                 HasForeignKey(x=>x.OwnerId).
                 OnDelete(DeleteBehavior.Cascade);
+
+
             builder.HasOne<Block>(x=>x.Blocks).
                 WithMany(y=>y.Flats).
                 HasForeignKey(x=>x.BlockId).

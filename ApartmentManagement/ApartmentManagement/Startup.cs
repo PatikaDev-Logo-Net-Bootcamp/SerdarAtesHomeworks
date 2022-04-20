@@ -88,6 +88,11 @@ namespace ApartmentManagement
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+                endpoints.MapControllerRoute(
+       name: "MyArea",
+       pattern: "{area:Identity}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
 
                 endpoints.MapHub<SignalRHub>("/chatHub");

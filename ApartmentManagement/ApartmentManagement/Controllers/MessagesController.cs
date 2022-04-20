@@ -2,6 +2,7 @@
 using ApartmentManagement.DataAcces.EntityFramework;
 using ApartmentManagement.Domain;
 using ApartmentManagement.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace ApartmentManagement.Controllers
 {
+    [Authorize(Roles = "Admin,Basic")]
     public class MessagesController : Controller
     {
         private readonly IMessageService messageService;
