@@ -34,20 +34,28 @@
                             <div class="sb-sidenav-menu-heading">İşlemler</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Kullanıcı İşemleri
+                                Kullanıcı İşlemleri
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" asp-controller="User" asp-action="AddUser">Kullanıcı Ekle</a>
+                                    @if(User.IsInRole("Admin"))
+                                {
+                                           <a class="nav-link" asp-controller="User" asp-action="AddUser">Kullanıcı Ekle</a>
+                                }
+
                                     <a class="nav-link" asp-controller="User" asp-action="Index">Kullanıcılar</a>
                                     <a class="nav-link" asp-controller="User" asp-action="GetUserPaidBills">Ödenmiş Faturalar</a>
                                     <a class="nav-link" asp-controller="User" asp-action="GetUserNotPaidBills">Ödenmemiş Faturalar</a>
                                 </nav>
                             </div>
+                                   @if(User.IsInRole("Admin"))
+                                {
+                                          
+                                
                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#BlockCollapseAuth" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Blok İşemleri
+                                Blok İşlemleri
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="BlockCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -56,9 +64,10 @@
                                     <a class="nav-link" asp-controller="Block" asp-action="Index">Bloklar</a>
                                 </nav>
                             </div>
+                          
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#FlatCollapseAuth" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Daire İşemleri
+                                Daire İşlemleri
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="FlatCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -66,18 +75,28 @@
                                     <a class="nav-link" asp-controller="Flat" asp-action="AddFlat">Daire Ekle</a>
                                     <a class="nav-link" asp-controller="Flat" asp-action="Index">Daireler</a>
                                 </nav>
-                            </div>
+                            </div>  
                              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#BillCollapseAuth" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Fatura İşemleri
+                                Fatura İşlemleri
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="BillCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" asp-controller="Bill" asp-action="AddBill">Fatura Ekle</a>
                                     <a class="nav-link" asp-controller="Bill" asp-action="Index">Faturalar</a>
+                                    <a class="nav-link" asp-controller="BillType" asp-action="AddBillType">Fatura Türü Ekle</a>
+                                    <a class="nav-link" asp-controller="BillType" asp-action="Index">Fatura Türleri</a>
                                 </nav>
                             </div>
+
+                            
+                        
+                        
+                        
+                        
+                        
+                        }
                               <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#MessageCollapseAuth" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Mesajlar
