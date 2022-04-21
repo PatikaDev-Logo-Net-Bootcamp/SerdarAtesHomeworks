@@ -13,7 +13,8 @@ Patika.dev 173. Logo Yazılım .Net Core Bootcamp Bitirme Projesi.Projede Apartm
 
 ## Projeyi Çalıştırmak İçin
 
-Projeyi Code First yaklaşımı ile yazdım.Bu yüzden projeyi açtıktan sonra app-settings dosyasında kendi db ayarlarınızı yapıp package manager console a update-database yazarsanız db oluşacaktır.MongoDb için PaymentAPI katmanında gene app-settings json dosyasında MongoDB configurasyon ayarlarını yapmanız gerek ben ücretsiz atlas sürümünü kullandım cloud olarak local db de kullanabilirsiniz.
+Projeyi Code First yaklaşımı ile yazdım.Bu yüzden projeyi açtıktan sonra `app-settings.json` dosyasında kendi database ayarlarınızı yapıp package manager console a 
+`update-database` yazarsanız database oluşacaktır.MongoDb için PaymentAPI katmanında aynı şekilde `app-settings.json` dosyasında MongoDB configurasyon ayarlarını yapmanız gerek ben ücretsiz atlas sürümünü kullandım cloud olarak local database de kullanabilirsiniz.
 
 ## Ekran Görüntüleri
 
