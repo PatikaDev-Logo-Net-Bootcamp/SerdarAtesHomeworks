@@ -1,6 +1,6 @@
 ﻿# Apartment Management
 
-Patika.dev 173. Logo Yazılım .Net Core Bootcamp Bitirme Projesi.Projede Apartman yönetimine dair çoğu şey bulunmaktadır.Birden fazla blok lu sitelerde kullanılabilir.İlk önce kulllanıcı eklenir sonra blok en son daire eklenir.Kullanıcı yöneticiye  veya diğer kullancılara mesaj atabilir.Daire ekledikten sonra daireye aidat ataması yapılır.Kullanıcı kredi kartıyla aidat ödemesi yapabilir.
+Patika.dev 173. Logo Yazılım .Net Core Bootcamp Bitirme Projesi. Projede Apartman yönetimine dair çoğu şey bulunmaktadır. Birden fazla blok lu sitelerde kullanılabilir. İlk önce kulllanıcı eklenir sonra blok en son daire eklenir. Kullanıcı yöneticiye veya diğer kullancılara mesaj atabilir. Daire ekledikten sonra daireye aidat ataması yapılır. Kullanıcı kredi kartıyla aidat ödemesi yapabilir.
 
 
 # Kullanılan Teknojiler
@@ -13,8 +13,8 @@ Patika.dev 173. Logo Yazılım .Net Core Bootcamp Bitirme Projesi.Projede Apartm
 
 ## Projeyi Çalıştırmak İçin
 
-Projeyi Code First yaklaşımı ile yazdım.Bu yüzden projeyi açtıktan sonra `app-settings.json` dosyasında kendi database ayarlarınızı yapıp package manager console a 
-`update-database` yazarsanız database oluşacaktır.MongoDb için PaymentAPI katmanında aynı şekilde `app-settings.json` dosyasında MongoDB configurasyon ayarlarını yapmanız gerek ben ücretsiz atlas sürümünü kullandım cloud olarak local database de kullanabilirsiniz.
+Projeyi Code First yaklaşımı ile yazdım. Bu yüzden projeyi açtıktan sonra `app-settings.json` dosyasında kendi database ayarlarınızı yapıp package manager console a 
+`update-database` yazarsanız database oluşacaktır. MongoDb için PaymentAPI katmanında aynı şekilde `app-settings.json` dosyasında MongoDB configurasyon ayarlarını yapmanız gerek ben ücretsiz atlas sürümünü kullandım cloud olarak local database de kullanabilirsiniz.
 
 ## Ekran Görüntüleri
 
