@@ -1,4 +1,4 @@
-﻿# ApartmentManagement
+﻿# Apartment Management
 
 Patika.dev 173. Logo Yazılım .Net Core Bootcamp Bitirme Projesi.Projede Apartman yönetimine dair çoğu şey bulunmaktadır.Birden fazla blok lu sitelerde kullanılabilir.İlk önce kulllanıcı eklenir sonra blok en son daire eklenir.Kullanıcı yöneticiye  veya diğer kullancılara mesaj atabilir.Daire ekledikten sonra daireye aidat ataması yapılır.Kullanıcı kredi kartıyla aidat ödemesi yapabilir.
 
