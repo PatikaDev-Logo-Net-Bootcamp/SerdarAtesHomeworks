@@ -57,13 +57,13 @@ namespace ApartmentManagement.PaymentAPI.Controllers
 
             if (creditCardResult == null)
             {
-                return Error("Geçersiz kredi kartı/ Kredi kartı bulunamadı.");
+                return Error("Kart Bulunamadı");
             }
-            if (creditCardResult.Balance <= createPaymentDto.Price)
+            if (creditCardResult.Balance < createPaymentDto.Price)
             {
-                return Error("Yetersiz bakiye.");
+                return Error("Kart bakiyesi yetersiz");
             }
-            var createInvoicePayment = new BillPayment()
+            var BillPayment = new BillPayment()
             {
                 CardNumber = createPaymentDto.CardNumber,
                 Cvv = createPaymentDto.Cvv,
@@ -75,8 +75,8 @@ namespace ApartmentManagement.PaymentAPI.Controllers
             creditCardResult.Balance -= createPaymentDto.Price;
 
             await CreditCardService.Update(creditCardResult.Id, creditCardResult);
-            await BillService.AddPayment(createInvoicePayment);
-            return Success(createInvoicePayment.Id);
+            await BillService.AddPayment(BillPayment);
+            return Success(BillPayment.Id);
         }
         [Route("CreateCreditCard")]
         [HttpPost]
@@ -91,7 +91,7 @@ namespace ApartmentManagement.PaymentAPI.Controllers
                 ValidYear = creditCardInfoDto.ValidYear,
             };
             await CreditCardService.Add(createCreditCard);
-            return "Succes";
+            return "Başarılı";
         }
 
     }
