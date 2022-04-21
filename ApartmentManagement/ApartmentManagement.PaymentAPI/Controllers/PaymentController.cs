@@ -80,15 +80,15 @@ namespace ApartmentManagement.PaymentAPI.Controllers
         }
         [Route("CreateCreditCard")]
         [HttpPost]
-        public async Task<string> CreateCreditCard(CreditCartDto creditCardInfoDto)
+        public async Task<string> CreateCreditCard(CreditCartDto creditCard)
         {
             var createCreditCard = new CreditCart()
             {
-                CardNumber = creditCardInfoDto.CardNumber,
-                Cvv = creditCardInfoDto.Cvv,
-                Balance = creditCardInfoDto.Balance,
-                ValidMonth = creditCardInfoDto.ValidMonth,
-                ValidYear = creditCardInfoDto.ValidYear,
+                CardNumber = creditCard.CardNumber,
+                Cvv = creditCard.Cvv,
+                Balance = creditCard.Balance,
+                ValidMonth = creditCard.ValidMonth,
+                ValidYear = creditCard.ValidYear,
             };
             await CreditCardService.Add(createCreditCard);
             return "Başarılı";
